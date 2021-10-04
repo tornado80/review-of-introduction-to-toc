@@ -1,0 +1,64 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+	گرامر‌ها یک مدل محاسباتی هستند و برخلاف اتوماتا‌های متناهی که کلمات یک زبان را با قرار گرفتن در استیت اکسپت پذیرش می‌کنند، کلمات زبانی را به کمک تعدادی قاعده
+	\LTRfootnote{\lr{Production Rule}}
+	تولید می‌کنند.
+	\begin{definition}
+		گرامر مستقل از متن یک چهار‌تایی 
+		$G = (V, \Sigma, S, P)$
+		است که به ترتیب $V$ مجموعه متناهی متغیر‌های گرامر، 
+		$\Sigma$
+		مجموعه متناهی حروف الفبا، $S$ متغیر شروع گرامر ($S \in V$) و $P$ مجموعه متناهی از قواعد که به فرم 
+		$A \rightarrow \alpha$
+		هستند که 
+		$A \in V$ 
+		و
+		$\alpha \in (V \cup \Sigma)^*$.
+	\end{definition}
+	
+	\begin{example}
+		گرامر زیر زبان 
+		$L = \{a^nb^n \, | \, n \in \mathrm{N}\}$
+		را تولید می‌کند.
+		\begin{align*}
+			G &= (\{S\}, \{a, b\}, S, \{S \rightarrow aSb, S \rightarrow \Lambda\}) \\
+			S &\rightarrow aSb \\
+			S &\rightarrow \Lambda
+		\end{align*}
+	یا به طور خلاصه
+	$S \rightarrow aSb \, | \, \Lambda$.
+	واضح است که 
+	$\Lambda \in (V \cup \Sigma)^*$
+	و به معنای قابلیت جایگزینی $S$ با رشته تهی است؛ در نتیجه تولید یا پروداکشن می‌تواند خاتمه یابد.
+	\end{example}
+	
+	برای نشان دادن نحوه تولید یک کلمه به کمک زبان از نماد های 
+	$\Rightarrow$،
+	$\Rightarrow^*$
+	و
+	$\Rightarrow^n$
+	استفاده می‌شود.
+	
+	\begin{example}
+		گرامر $G$ که در بالا توصیف شد را در نظر بگیرید، رشته 
+		$aabb$
+		به صورت زیر از قواعد گرامر مشتق
+		\LTRfootnote{derivation}
+		 می‌شود:
+		 $$S \Rightarrow aSb \Rightarrow aaSbb \Rightarrow aa\Lambda bb \Rightarrow aabb$$
+		یا به طور خلاصه 
+		$S \Rightarrow^{*}_G aabb$
+		نوشته می‌شود که یعنی با تعدادی مرحله به رشته مذکور می‌رسیم. همچنین با زیرنویس $G$ مشخص می‌کنیم که از قواعد گرامر $G$ استفاده شده‌است.
+	\end{example}
+	
+	\begin{definition}
+	اگر 
+	$G = (V, \Sigma, S, P)$
+	یک 
+	گرامر مستقل از متن باشد، منظور از زبان تولید شده توسط $G$، 
+	$$L(G) = \{x \in \Sigma^* \, | \, S \Rightarrow^{*}_G x \}$$
+	است. زبانی مستقل از متن است اگر گرامر مستقل از متنی وجود داشته باشد که آن را تولید کند.
+	\end{definition}
+	
+\end{document}

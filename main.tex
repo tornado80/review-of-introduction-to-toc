@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[a4paper, margin=0.7in]{geometry}
+\usepackage{setspace}
+\usepackage{xepersian}
+\usepackage{subfiles}
+\settextfont{XB Niloofar}
+\title{مروری بر مبانی نظریه محاسبه}
+\author{
+	امیرحسین رجبی
+	\and
+	مهدی حجازی
+}
+\date{}
+
+\newenvironment{example}
+{\smallskip \noindent \emph{مثال:}}
+{\hfill \smallskip}
+\newtheorem{theorem}{قضیه}
+\newtheorem{proposition}{گزاره}
+\newtheorem{claim}{ادعا}
+\newtheorem{lemma}{لم}
+\newtheorem{corollary}{نتیجه}
+\newtheorem{definition}{تعریف} % Use this for non-trivial definitions.
+
+\begin{document}
+	\maketitle
+	
+	\doublespacing
+	
+	\section{
+	گرامر های مستقل از متن
+	\protect\LTRfootnote{Context Free Grammar}
+	}
+	\subfile{cfg}
+	
+	
+ 
+\end{document}
