@@ -1,17 +1,19 @@
 \documentclass{article}
 
+\usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[a4paper, margin=0.7in]{geometry}
 \usepackage{setspace}
 \usepackage{xepersian}
+\usepackage{qtree}
 \usepackage{subfiles}
-\settextfont{XB Niloofar}
+\settextfont{Yas}
+\ExplSyntaxOn \cs_set_eq:NN \etex_iffontchar:D \tex_iffontchar:D \ExplSyntaxOff
+\setmathdigitfont{Yas}
 \title{مروری بر مبانی نظریه محاسبه}
 \author{
 	امیرحسین رجبی
-	\and
-	مهدی حجازی
 }
 \date{}
 
@@ -31,8 +33,7 @@
 	\doublespacing
 	
 	\section{
-	گرامر های مستقل از متن
-	\protect\LTRfootnote{Context Free Grammar}
+	گرامرهای مستقل از متن
 	}
 	\subfile{cfg}
 	
